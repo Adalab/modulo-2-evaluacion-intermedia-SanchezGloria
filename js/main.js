@@ -1,8 +1,9 @@
+'use strict';
 const buttonElement = document.querySelector('.js-btn');
 const inputElement = document.querySelector('.js-input');
 const instructionsParagrapragh = document.querySelector('.js-instructions');
-const counter = document.querySelector('.js-counter');
-console.log(counter);
+const instructions = document.querySelector('.page__footer');
+// console.log(counter);
 
 // FUNCIÓN PARA EL RANDOM NUMBER
 
@@ -30,10 +31,34 @@ function showResult() {
   }
 }
 
+// INTENTO DE PASAR EL CÓDIGO DE LAS INSTRUCCIONES A JAVASCRIPT
+
+function getInstructionsHtmlCode() {
+  let htmlCode = `<p class="js-counter page__footer--counter">número de intentos: </p>`;
+  return htmlCode;
+}
+
+// FUNCIÓN PARA PINTAR EL CÓDIGO
+
+function paintHtmlCode() {
+  instructions.innerHTML = getInstructionsHtmlCode();
+  console.log(instructions);
+}
+
+paintHtmlCode();
+
+// LLAMO DEL HTML AL COUNTER ANTES DE USARLO
+
+const counter = document.querySelector('.js-counter');
+
+// FUNCIÓN PARA EL COUNTER
+
 let acc = 0;
 function showCount() {
   acc++;
-  counter.innerHTML = 'Número de intentos:' + acc;
+  counter.innerHTML = '';
+  instructions.innerHTML = getInstructionsHtmlCode() + acc;
+  // counter.innerHTML = 'Número de intentos:' + acc;
 }
 
 function updateAll() {

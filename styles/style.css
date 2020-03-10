@@ -60,10 +60,16 @@
   text-transform: capitalize;
 }
 
-.page__footer--counter {
+.page__footer {
   padding: 1em;
   border: 1px solid rgb(98, 198, 238);
+  text-align: center;
 }
+
+/* .page__footer--counter {
+  padding: 1em;
+  border: 1px solid rgb(98, 198, 238);
+} */
 
 .page__footer--counter::first-letter {
   text-transform: capitalize;
