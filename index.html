@@ -7,7 +7,7 @@
     <title>Adivina el número</title>
   </head>
   <body>
-    <header>
+    <header class="page__header">
       <h1 class="page__header--title">
         adivina el número
       </h1>
@@ -17,9 +17,10 @@
         introduce aquí tu número:
       </label>
       <input class="page__main--input" type="text" name="input" value="" />
-      <p class="page__main--input">pista: <span>escribe</span> el número y dale a <span>prueba</span></p>
+      <button class="page__main--button">prueba</button>
+      <p class="page__main--instructions">pista: <span class="span">escribe</span> el número y dale a <span class="span">prueba</span></p>
       <footer class="page__footer">
-        <p class="page__footer--instructions">número de intentos</p>
+        <p class="page__footer--counter">número de intentos: 0</p>
       </footer>
     </main>
     <script src="./js/main.js"></script>
