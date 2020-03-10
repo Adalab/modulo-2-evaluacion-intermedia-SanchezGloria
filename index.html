@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Document</title>
+    <title>Adivina el número</title>
   </head>
   <body>
+    <header>
+      <h1 class="page__header--title">
+        adivina el número
+      </h1>
+    </header>
+    <main class="page__main">
+      <label class="page__main--label" for="page__main--label">
+        introduce aquí tu número:
+      </label>
+      <input class="page__main--input" type="text" name="input" value="" />
+      <p class="page__main--input">pista: <span>escribe</span> el número y dale a <span>prueba</span></p>
+      <footer class="page__footer">
+        <p class="page__footer--instructions">número de intentos</p>
+      </footer>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>
