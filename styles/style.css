@@ -2,37 +2,39 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  background: #ecb0f7;
 }
 
 .page__header--title {
-  margin: 3em;
+  margin: 1.5em;
   text-align: center;
+  font-family: 'Bellota', cursive;
+  font-size: 40px;
 }
 .page__header--title::first-letter {
   text-transform: capitalize;
 }
 
-.page__main {
+.page__main--form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.page__main--label {
+.page__main--form--label {
   margin: 20px;
 }
 
-.page__main--label::first-letter {
+.page__main--form--label::first-letter {
   text-transform: capitalize;
 }
 
-.page__main--input {
+.page__main--form--input {
   height: 2.25em;
   margin-bottom: 20px;
   border: 2px solid rgba(80, 77, 77, 0.479);
 }
-.page__main--button {
-  margin-bottom: 20px;
+.page__main--form--button {
   text-transform: capitalize;
   width: 6em;
   height: 2em;
@@ -41,18 +43,27 @@
   color: white;
   border-radius: 5px;
   font-size: 1em;
-}
-.page__main--instructions {
   margin-bottom: 20px;
-  padding: 1em;
-  border: 1px solid rgb(98, 198, 238);
 }
 
-.page__main--instructions::first-letter {
+.reset {
+  background: red;
+}
+.page__main--form--instructions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1em;
+  border: 5px double rgb(98, 198, 238);
+  text-align: center;
+  width: 30%;
+  margin: auto;
+}
+
+.page__main--form--instructions::first-letter {
   text-transform: capitalize;
 }
 
-.page__main--input::first-letter {
+.page__main--form--input::first-letter {
   text-transform: capitalize;
 }
 
@@ -62,8 +73,10 @@
 
 .page__footer {
   padding: 1em;
-  border: 1px solid rgb(98, 198, 238);
+  border: 5px double rgb(98, 198, 238);
   text-align: center;
+  width: 30%;
+  margin: 20px auto;
 }
 
 /* .page__footer--counter {

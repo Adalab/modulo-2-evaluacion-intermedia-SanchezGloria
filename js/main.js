@@ -1,5 +1,6 @@
 'use strict';
 const buttonElement = document.querySelector('.js-btn');
+const buttonReset = document.querySelector('.js-btn-reset');
 const inputElement = document.querySelector('.js-input');
 const instructionsParagrapragh = document.querySelector('.js-instructions');
 const instructions = document.querySelector('.page__footer');
@@ -11,7 +12,7 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-const randomNumber = getRandomNumber(100);
+let randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
 // FUNCIÓN PARA MOSTRAR INSTRUCCIONES
@@ -61,7 +62,24 @@ function showCount() {
   // counter.innerHTML = 'Número de intentos:' + acc;
 }
 
-function updateAll() {
+function enterKey() {
+  if (event.key === 13) {
+    showCount();
+    showResult();
+  }
+}
+
+function reset() {
+  randomNumber = getRandomNumber(100);
+  inputElement.innerHTML = '';
+  instructionsParagrapragh.innerHTML = 'Pista: Escribe un número y dale a Prueba';
+  paintHtmlCode();
+  acc = 0;
+  console.log(randomNumber);
+}
+
+function updateAll(ev) {
+  ev.preventDefault();
   showResult();
   showCount();
 }
@@ -69,5 +87,6 @@ function updateAll() {
 // LISTENERS
 
 buttonElement.addEventListener('click', updateAll);
+buttonReset.addEventListener('click', reset);
 
 console.log('Ready to go');
